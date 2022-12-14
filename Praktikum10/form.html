@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs.html">Nomor 2</a></li>
+                <li><a href="chat.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="form.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <label for="username">Nama Pelanggan</label>
+            <input type="text" id="nama">
+            <label for="password">Email</label>
+            <input type="password" id="email">
+            <label for="password">Jam Keberangkatan</label>
+            <input type="password" id="jam">
+            <label for="password">Tujuan Keberangkatan</label>
+            <input type="password" id="tujuan">
+            <label for="password">Jumlah Tiket</label>
+            <input type="password" id="tiket">
+            <br>
+            <button type="button" onclick="submit()">Submit</button>
+        </div>
+    </div>
+    <script>
+        function submit(){
+            let na = document.getElementById("nama").value;
+            let mail = document.getElementById("email").value;
+            let ja = document.getElementById("jam").value;
+            let tu = document.getElementById("tujuan").value;
+            let ti = document.getElementById("tiket").value;
+
+            if(na == "Thaniea", mail == "niaaa", ja == "12.00", tu == "Jepang", ti == "1"){
+                alert("Yeay.. Selamat Tiket Anda Tervalidasi!!");
+                location.href = "form-sukses.html"
+            }else {
+                alert("Upss Error");
+            }
+        }
+    </script>
+</body>
+</html>

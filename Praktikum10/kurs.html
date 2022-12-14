@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs.html">Nomor 2</a></li>
+                <li><a href="">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="form.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Kurs Rupiah</h1>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table>
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Valas</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="pilihan" onchange="awal()"></td>
+                <td>
+                    <select id="pilihan" onchange="nilai()">
+                        <option value="">-----Pilih-----</option>
+                        <option value="US">Dollar US</option>
+                        <option value="Singa">Dollar Singapur</option>
+                        <option value="Malay">Ringgit Malaysia</option>
+                        <option value="Jep">Yen Jepang</option>
+                        <option value="Eu">Euro</option>
+                        <option value="Sau">Riyal Saudi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="rupiah">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        function nilai(){
+            let pil = document.getElementById("pilihan").value;
+            let rup = document.getElementById("rupiah").value;
+            let hasil;
+            if (rup == "US"){
+                hasil = pil*9915
+            }else if (rup == "Singa"){
+                hasil = pil*13472
+            }else if (rup == "Malay"){
+                hasil = pil*847
+            } else if (rup == "Jep"){
+                hasil = pil*120
+            }else if (rup == "Eu"){
+                hasil = pil*15888
+            }else if (rup == "Sau"){
+                hasil = pil*3592
+            }
+            document.getElementById("rupiah").value = String("Rp." + hasil);
+        }
+    </script>
+</body>
+</html>
